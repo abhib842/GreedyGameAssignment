@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@+id/fabCreateProduct">
+
+    <fragment
+        android:id="@+id/fabCreateProduct"
+        android:name="com.example.fluperdemotask.view.fragment.ProductFragment"
+        android:label="Product List"
+        tools:layout="@layout/fragment_product_list_view">
+        <action
+            android:id="@+id/action_ProductListFragment_to_UpdateProductFragment"
+            app:destination="@id/fabUpdateProduct" />
+
+        <action
+            android:id="@+id/action_ProductListFragment_to_FullScreenImage"
+            app:destination="@id/fabShowImageInFullScreen" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fabUpdateProduct"
+        android:name="com.example.fluperdemotask.view.fragment.ProductUpdateFragment"
+        android:label="Create/Update Product"
+        tools:layout="@layout/update_data">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fabShowImageInFullScreen"
+        android:name="com.example.fluperdemotask.view.fragment.FullImageFragment"
+        android:label="Create/Full Screen Image"
+        tools:layout="@layout/full_image_view">
+
+
+    </fragment>
+
+</navigation>

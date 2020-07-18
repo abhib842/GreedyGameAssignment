@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="updateProductViewModel" type="com.example.fluperdemotask.viewmodel.ProductViewModel"/>
+    </data>
+<FrameLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context="com.example.fluperdemotask.view.fragment.FullImageFragment">
+
+    <ImageView
+        android:id="@+id/mFull_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ImageView>
+
+</FrameLayout>
+</layout>

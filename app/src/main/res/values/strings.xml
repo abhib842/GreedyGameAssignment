@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Greedy Game Assignment</string>
+    <string name="create_product">Create Product</string>
+    <string name="update_product">Update Product</string>
+    <string name="delete_product">Delete Product</string>
+    <string name="save_product">Save Product</string>
+    <string name="sale_price">Sale Price</string>
+    <string name="colors">Colors</string>
+    <string name="stores">Stores</string>
+    <string name="regular_price">Regular Price</string>
+    <string name="description">Description</string>
+    <string name="name">Name</string>
+    <string name="store_address">Store Address</string>
+    <string name="store_name">Store Name</string>
+    <string name="color">Color</string>
+</resources>

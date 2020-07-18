@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="updateProductViewModel"
+            type="com.example.fluperdemotask.viewmodel.ProductViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="#FF0B354B"
+        android:clickable="true"
+        tools:context=".view.fragment.ProductUpdateFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:hint="@string/name"
+                android:text="@={updateProductViewModel.MProdName}"
+                android:textSize="@dimen/_15ssp" />
+
+            <EditText
+                android:id="@+id/etProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:hint="@string/description"
+                android:text="@={updateProductViewModel.MDesc}"
+                android:textSize="@dimen/_15ssp"/>
+
+            <EditText
+                android:id="@+id/etProductRegPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:hint="@string/regular_price"
+                android:text="@={updateProductViewModel.prodRegPrice}"
+                android:textSize="@dimen/_15ssp"/>
+
+            <EditText
+                android:id="@+id/etProductSalePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:hint="@string/sale_price"
+                android:text="@={updateProductViewModel.prodSalePrice}"
+                android:textSize="@dimen/_15ssp" />
+
+
+            <EditText
+                android:id="@+id/etProductColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:hint="@string/color"
+                android:text="@={updateProductViewModel.prodColor}"
+                android:textSize="@dimen/_15ssp"/>
+
+
+            <EditText
+                android:id="@+id/etProductStores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:hint="@string/store_name"
+                android:text="@={updateProductViewModel.prodStores}"
+                android:textSize="@dimen/_15ssp"/>
+
+            <EditText
+                android:id="@+id/etProductStoreAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:hint="@string/store_address"
+                android:text="@={updateProductViewModel.prodStoresAddress}"
+                android:textSize="@dimen/_15ssp" />
+            <ImageView
+                android:id="@+id/ivDisplayProductImage"
+                android:layout_width="match_parent"
+                android:layout_height="181dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/_10sdp">
+
+            <Button
+                android:id="@+id/btSaveProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="@{()->updateProductViewModel.save()}"
+                android:text="@string/save_product"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llUpdateDeleteProductItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/product_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_product" />
+
+                <Button
+                    android:id="@+id/product_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete_product" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>
